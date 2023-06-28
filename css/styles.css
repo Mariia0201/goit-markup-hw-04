@@ -3,6 +3,7 @@
     --logo-light: #F4F4FD;
     --btn: #4D5AE5;
     --text: #434455;
+    --lightslate: #8E8F99;
 }
 
 .container {
@@ -390,6 +391,50 @@ button {
 
 .clients-item {}
 
-.clients-link {}
+.clients-link {
+    display: flex;
+    width: 168px;
+    height: 88px;
+    justify-content: center;
+    align-items: center;
 
-.clients-icon {}
+    border-radius: 4px;
+    border: 1px solid var(--lightslate);
+}
+.clients-link:hover {
+    border-color: #404BBF;
+}
+
+.clients-icon {
+    fill: var(--lightslate);
+}
+.clients-link:hover .clients-icon {
+    fill: #404BBF;
+}
+.four {
+    padding: 120px 0;
+}
+
+.advantages-icon {
+
+}
+.advantages {
+    width: 264px;
+    height: 112px;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    background-color: #F4F4FD;
+}
+
+.networks-link{
+width: 40px;
+height: 40px;
+background-color: var(--btn);
+
+}
+.networks-icon {
+
+}
+.networks-list {
+    gap: 24px;
+}
