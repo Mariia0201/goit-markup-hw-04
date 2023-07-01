@@ -94,6 +94,7 @@ button {
 .header {
     background-color: #FFFFFF;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
     
     
 }
@@ -150,7 +151,7 @@ button {
 }
 
 .header-item {
-    
+    color: #404bbf;
 }
 
 .header-link {
@@ -163,20 +164,19 @@ button {
     color: var(--logo-dark);
     padding: 24px 0;
 }
-.header-link.active::after{111111111111111111111111
-    position: absolute;
+.header-link.active::after{
+    position: absolute; 
     bottom: 0;
     left:0;
+    bottom: -1px;
 
     content: '';
     display: block;
     width: 100%;
     height: 4px;
-    background-color: var(--btn);
+    background-color: #404bbf;
     border-radius: 2px;
-    transition: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus {
@@ -215,8 +215,7 @@ button {
     
     padding-top: 188px;
     padding-bottom: 188px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.70)),
-         url(../images/hero/people-office\ 1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img-name.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -253,9 +252,7 @@ button {
     min-width: 169px;
     height: 56px;
     border-radius: 4px;
-    transition: color, background-color, box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btm:hover,
@@ -307,11 +304,14 @@ button {
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 
 .member {
-    padding: 32px 16px;
+    padding: 32px 0;
     
 
 
@@ -419,7 +419,10 @@ button {
 
 }
 
-.clients-item {}
+.clients-item {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .clients-link {
     display: flex;
@@ -427,6 +430,7 @@ button {
     height: 88px;
     justify-content: center;
     align-items: center;
+    color: var(--lightslate);
 
     border-radius: 4px;
     border: 1px solid var(--lightslate);
@@ -435,11 +439,18 @@ button {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover {
-    border-color: #404BBF;
+    color: #404BBF;
+
+}
+.clients-link:focus {
+    color: #404BBF;
+    border-color: #404bbf;
+
 }
 
+
 .clients-icon {
-    fill: var(--lightslate);
+    fill: currentColor;;
     transition: color, background-color, box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -455,6 +466,10 @@ button {
 
 }
 .advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
     width: 264px;
     height: 112px;
     padding: 24px 100px;
@@ -469,6 +484,8 @@ background-color: var(--btn);
 border-radius: 50%;
 padding: 12px 12px;
 display: flex;
+align-items: center;
+justify-content: center;
 transition: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -479,6 +496,7 @@ width: 16px;
 height: 16px;
 display: flex;
 justify-content: center;
+fill: var(--logo-light)
 }
 .networks-list {
     display: flex;
@@ -487,7 +505,10 @@ justify-content: center;
     padding-top: 8px;
 
 }
-.networks-link:hover
+.networks-item{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.networks-link:hover,
 .networks-link:focus {
     background-color: #404BBF;
 }
@@ -495,6 +516,7 @@ justify-content: center;
 
 .footer-items{
     display: flex;
+    align-items: baseline;
 }
 .footer-block1{
     margin-right: 120px;
@@ -505,11 +527,22 @@ justify-content: center;
  height: 40px;
  background-color: #4D5AE5;
  border-radius: 50%;
- padding:8px 8px ;
+ padding:8px 8px;
+align-items: center;
+justify-content: center;
+}
+
+.footer-networks-link:hover,
+.footer-networks-link:focus {
+    background-color: #31d0aa;
+
 }
 .footer-networks-list {
     display: flex;
     gap: 16px;
+}
+.footer-networks-item {
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-title {
         color:  #FFF;
@@ -525,9 +558,10 @@ justify-content: center;
         width: 24px;
         height: 24px;
         justify-content: center;
+        fill: var(--logo-light);
         transition: color, background-color, box-shadow;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-networks-link:hover
 .footer-networks-link:focus 
@@ -542,9 +576,10 @@ left:0;
 width: 100%;
 height: 100%;
 background-color: rgba(46, 47, 66, 0.40);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden{
-    opasity: 0;
+    opacity: 0;
     pointer-events: none;
     visibility: hidden;
 }
@@ -554,7 +589,8 @@ top: 50%;
 left: 50%;
 
 transform: translateX(-50%) translateY(-50%);
-
+min-height: 584px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 width: 408px;
 height: 584px;
 border-radius: 4px;
@@ -579,8 +615,16 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0
     justify-content: center;
 
     background-color: #E7E9FC;
-    border-radius: 24px;
+    border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
 }
 .overlay {
     position:absolute;
@@ -606,4 +650,8 @@ transform: translateY(0);
 }
 .portfolio-img{
     overflow: hidden;
+}
+.modal-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
