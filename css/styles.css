@@ -528,7 +528,8 @@ fill: var(--logo-light)
 
 
 .networks-link:hover,
-.networks-link:focus {
+.networks-link:focus
+.networks-link:active {
     background-color: #404BBF;
 }
 
@@ -553,7 +554,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-networks-link:hover,
-.footer-networks-link:focus {
+.footer-networks-link:focus
+.footer-networks-link:active {
     background-color: #31d0aa;
 }
 
