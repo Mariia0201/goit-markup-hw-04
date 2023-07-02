@@ -454,7 +454,7 @@ button {
 
     border-radius: 4px;
     border: 1px solid var(--lightslate);
-    transition зі значенням border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover {
@@ -525,7 +525,9 @@ fill: var(--logo-light)
 }
 
 
-.networks-link:hover,
+.networks-link:hover {
+    background-color: #404BBF;
+}
 .networks-link:focus {
     background-color: #404BBF;
 }
@@ -550,17 +552,19 @@ justify-content: center;
 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-networks-link:hover,
-.footer-networks-link:focus {
+.footer-networks-link:hover{
     background-color: #31d0aa;
 
+}
+.footer-networks-link:focus {
+    background-color: #31d0aa;
 }
 .footer-networks-list {
     display: flex;
     gap: 16px;
 }
 .footer-networks-item {
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-title {
         color:  #FFF;
