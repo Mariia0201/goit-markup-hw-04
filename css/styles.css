@@ -413,6 +413,8 @@ button {
     width: calc((100% - 48px) / 3);
     position: relative;
     overflow: hidden;
+    top: 0;
+    left: 0;
 
 }
 .app {
